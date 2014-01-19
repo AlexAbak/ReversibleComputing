@@ -2,7 +2,7 @@
  * Обратимые вычисления
  */
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Обратимые вычисления
  */
-package org.deneblingvo.reversible;
+package org.deneblingvo.booleans.reversible;

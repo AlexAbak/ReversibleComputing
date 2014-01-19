@@ -5,7 +5,7 @@ package org.deneblingvo.booleans;
 
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Булева функция
  */
 public interface BooleanFunction {
@@ -26,7 +26,8 @@ public interface BooleanFunction {
 	 * Вычисляет функцию
 	 * @param inputs Состояние входов
 	 * @return Состояние выходов
+	 * @throws CalculateException При ошибке вычисления
 	 */
-	public BooleanValues calculate(BooleanValues inputs); 
+	public BooleanValues calculate(BooleanValues inputs) throws CalculateException; 
 
 }

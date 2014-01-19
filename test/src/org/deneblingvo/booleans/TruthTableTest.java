@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Булева функция выраженная через таблицу истинности
  */
 public class TruthTableTest {
@@ -42,7 +42,7 @@ public class TruthTableTest {
 	 * Test method for {@link org.deneblingvo.booleans.TruthTable#calculate(org.deneblingvo.booleans.BooleanValues)}.
 	 */
 	@Test
-	public void testCalculate() {
+	public void testCalculate() throws CalculateException {
 		assertEquals(7, this.testTruthTable.calculate(new BooleanValues(0, 3)).getValue());
 		assertEquals(0, this.testTruthTable.calculate(new BooleanValues(1, 3)).getValue());
 		assertEquals(6, this.testTruthTable.calculate(new BooleanValues(2, 3)).getValue());

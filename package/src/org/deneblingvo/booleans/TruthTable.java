@@ -6,7 +6,7 @@ package org.deneblingvo.booleans;
 import org.deneblingvo.utils.ArrayMath;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Булева функция выраженная через таблицу истинности
  */
 public abstract class TruthTable implements BooleanFunction {
@@ -32,14 +32,18 @@ public abstract class TruthTable implements BooleanFunction {
 	 */
 	@Override
 	public int getOutputCount() {
-		return BooleanMath.lg(ArrayMath.max(this.values)) + 1;
+		int max = ArrayMath.max(this.values);
+		return BooleanMath.lg(max) + 1;
 	}
 
 	/* (non-Javadoc)
 	 * @see org.deneblingvo.reversibleComputing.BooleanFunction#calculate(org.deneblingvo.reversibleComputing.BooleanValue[])
 	 */
 	@Override
-	public BooleanValues calculate(BooleanValues inputs) {
+	public BooleanValues calculate(BooleanValues inputs) throws CalculateException{
+		if (this.getInputCount() != inputs.getCount()) {
+			throw new WrongIOCount(this.getInputCount(), inputs.getCount());
+		}
 		int index = inputs.getValue();
 		int value = this.values[index]; 
 		BooleanValues outputs = new BooleanValues(value, this.getOutputCount());

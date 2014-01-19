@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Набор булевых значений
  */
 public class BooleanValuesTest {

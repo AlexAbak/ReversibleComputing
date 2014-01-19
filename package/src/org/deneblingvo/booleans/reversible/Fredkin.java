@@ -1,12 +1,12 @@
 /**
  * Элемент Фредкина
  */
-package org.deneblingvo.reversible;
+package org.deneblingvo.booleans.reversible;
 
 import org.deneblingvo.booleans.TruthTable;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Элемент Фредкина
  */
 public final class Fredkin extends TruthTable {

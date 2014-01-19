@@ -6,7 +6,7 @@ package org.deneblingvo.booleans.unary;
 import org.deneblingvo.booleans.TruthTable;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Отрицание
  */
 public final class Negative extends TruthTable {

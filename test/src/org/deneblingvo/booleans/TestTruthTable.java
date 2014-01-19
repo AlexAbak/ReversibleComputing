@@ -4,7 +4,7 @@
 package org.deneblingvo.booleans;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Тестовая таблица истинности
  */
 public final class TestTruthTable extends TruthTable {

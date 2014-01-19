@@ -1,12 +1,12 @@
 /**
  * Элемент Тоффоли
  */
-package org.deneblingvo.reversible;
+package org.deneblingvo.booleans.reversible;
 
 import org.deneblingvo.booleans.TruthTable;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Элемент Тоффоли
  */
 public final class Toffoli extends TruthTable {

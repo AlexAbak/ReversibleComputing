@@ -4,7 +4,7 @@
 package org.deneblingvo.booleans;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Булева алгебра
  */
 public final class BooleanMath {
@@ -16,6 +16,15 @@ public final class BooleanMath {
 	 */
 	static public int lg (int value) {
 		return (int) Math.floor(Math.log(value) / Math.log(2)); 
+	}
+
+	static public int mask(int count) {
+		int value = 0;
+		for (int i = 0; i < count; i++) {
+			value = value << 1;
+			value = value + 1;
+		}
+		return value;
 	}
 
 }

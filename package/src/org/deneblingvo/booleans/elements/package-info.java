@@ -2,7 +2,7 @@
  * Элементы булевой логики
  */
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Элементы булевой логики
  */
 package org.deneblingvo.booleans.elements;

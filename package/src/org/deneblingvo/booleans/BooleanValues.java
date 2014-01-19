@@ -5,7 +5,7 @@ package org.deneblingvo.booleans;
 
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Набор булевых значений
  */
 public final class BooleanValues {
@@ -66,6 +66,21 @@ public final class BooleanValues {
 	 */
 	public BooleanValue[] getValues () {
 		return this.values;
+	}
+
+	public BooleanValues[] extractValues (int count) {
+		count = this.getCount() - count;
+		int value1 = this.getValue();
+		int mask = BooleanMath.mask(count);
+		int value2 = value1 & mask;
+		value1 = value1 >> count;
+		BooleanValues[] outputs = {new BooleanValues(value1, this.getCount() - count), new BooleanValues(value2, count)};
+		return outputs;
+	}
+
+	static public BooleanValues concat (BooleanValues values1, BooleanValues values2) {
+		int value = (values1.getValue() << values2.getCount()) + values2.getValue();
+		return new BooleanValues(value, values1.getCount() + values2.getCount());
 	}
 
 	/**

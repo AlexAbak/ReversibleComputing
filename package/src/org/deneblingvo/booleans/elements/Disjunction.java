@@ -6,7 +6,7 @@ package org.deneblingvo.booleans.elements;
 import org.deneblingvo.booleans.TruthTable;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  *	Дизъюнкция
  */
 public final class Disjunction extends TruthTable {

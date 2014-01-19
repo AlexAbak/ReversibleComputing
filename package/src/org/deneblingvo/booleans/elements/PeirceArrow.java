@@ -6,7 +6,7 @@ package org.deneblingvo.booleans.elements;
 import org.deneblingvo.booleans.TruthTable;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Стрелка Пирса
  */
 public final class PeirceArrow extends TruthTable {

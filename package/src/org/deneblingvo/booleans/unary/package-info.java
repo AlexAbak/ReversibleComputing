@@ -2,7 +2,7 @@
  * Унарные операции 
  */
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Унарные операции
  */
 package org.deneblingvo.booleans.unary;

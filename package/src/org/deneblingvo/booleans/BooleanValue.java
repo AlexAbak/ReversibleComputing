@@ -4,7 +4,7 @@
 package org.deneblingvo.booleans;
 
 /**
- * @author alex
+ * @author Алексей Кляузер <drum@pisem.net>
  * Булево значение
  */
 public enum BooleanValue {

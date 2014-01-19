@@ -1,7 +1,8 @@
 /**
  * Булева функция
  */
-package org.deneblingvo.reversibleComputing;
+package org.deneblingvo.booleans;
+
 
 /**
  * @author alex
@@ -26,6 +27,6 @@ public interface BooleanFunction {
 	 * @param inputs Состояние входов
 	 * @return Состояние выходов
 	 */
-	public BooleanValue[] calculate(BooleanValue[] inputs); 
+	public BooleanValues calculate(BooleanValues inputs); 
 
 }

@@ -1,4 +1,4 @@
-package org.deneblingvo.booleans;
+﻿package org.deneblingvo.booleans;
 
 import org.deneblingvo.booleans.reversible.toffoli.NegativeTest;
 import org.junit.runner.RunWith;
@@ -12,7 +12,8 @@ import org.junit.runners.Suite.SuiteClasses;
 	FunctionListTest.class,
 	FunctionSequenceTest.class,
 	TruthTableTest.class, 
-	NegativeTest.class})
+	NegativeTest.class,
+	ConnectorTest.class})
 public class AllTests {
 
 }

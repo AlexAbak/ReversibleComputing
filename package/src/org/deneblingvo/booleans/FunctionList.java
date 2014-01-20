@@ -1,11 +1,13 @@
-/**
- * 
+﻿/**
+ * Список булевых функций
  */
 package org.deneblingvo.booleans;
 
+import org.w3c.dom.Element;
+
 /**
- * @author alex
- *
+ * @author Алексей Кляузер <drum@pisem.net>
+ * Список булевых функций
  */
 public class FunctionList implements BooleanFunction {
 
@@ -54,6 +56,24 @@ public class FunctionList implements BooleanFunction {
 			outputs = BooleanValues.concat(outputs, output);
 		}
 		return outputs;
+	}
+
+	/* (non-Javadoc)
+	 * @see org.deneblingvo.booleans.BooleanFunction#initDefs(void)
+	 */
+	@Override
+	public void initDefs(Element defs, int elementWidth, int elementHeight) {
+		for (BooleanFunction function : this.functions) {
+			function.initDefs(defs, elementWidth, elementHeight);
+		}
+	}
+
+	/* (non-Javadoc)
+	 * @see org.deneblingvo.booleans.BooleanFunction#paint(void)
+	 */
+	@Override
+	public void paint(Element svg, int x, int y, int elementWidth, int elementHeight) {
+
 	}
 
 	/**

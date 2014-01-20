@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Булева алгебра
  */
 package org.deneblingvo.booleans;

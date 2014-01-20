@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Отрицание через элемент Тоффоли
  */
 package org.deneblingvo.booleans.reversible.toffoli;

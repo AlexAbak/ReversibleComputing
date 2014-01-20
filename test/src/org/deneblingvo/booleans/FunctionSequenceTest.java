@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 
  */
 package org.deneblingvo.booleans;
@@ -6,6 +6,7 @@ package org.deneblingvo.booleans;
 import static org.junit.Assert.*;
 
 import org.deneblingvo.booleans.elements.Conjunction;
+import org.deneblingvo.booleans.svg.Image;
 import org.deneblingvo.booleans.unary.Negative;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,6 +24,8 @@ public class FunctionSequenceTest {
 	public void setUp() throws Exception {
 		BooleanFunction[] functions = {new Conjunction(), new Negative()};
 		this.functionSequence = new FunctionSequence(functions);
+		Image image = new Image(this.functionSequence);
+		image.saveToFile("fileName.svg");
 	}
 
 	/**

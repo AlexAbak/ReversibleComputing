@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Булева алгебра
  */
 package org.deneblingvo.booleans;
@@ -18,6 +18,11 @@ public final class BooleanMath {
 		return (int) Math.floor(Math.log(value) / Math.log(2)); 
 	}
 
+	/**
+	 * Получение маски определённого размера
+	 * @param count Размер маски
+	 * @return Маска
+	 */
 	static public int mask(int count) {
 		int value = 0;
 		for (int i = 0; i < count; i++) {

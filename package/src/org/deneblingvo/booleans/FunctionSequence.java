@@ -1,7 +1,9 @@
-/**
+﻿/**
  * Комплексный элемент
  */
 package org.deneblingvo.booleans;
+
+import org.w3c.dom.Element;
 
 /**
  * @author Алексей Кляузер <drum@pisem.net>
@@ -58,6 +60,27 @@ public class FunctionSequence implements BooleanFunction {
 			if (next.getInputCount() != prev.getOutputCount()) {
 				throw new WrongIOCount(next.getInputCount(), prev.getOutputCount());
 			}
+		}
+	}
+
+	/* (non-Javadoc)
+	 * @see org.deneblingvo.booleans.BooleanFunction#initDefs(void)
+	 */
+	@Override
+	public void initDefs(Element defs, int elementWidth, int elementHeight) {
+		for (BooleanFunction function : this.functions) {
+			function.initDefs(defs, elementWidth, elementHeight);
+		}
+	}
+
+	/* (non-Javadoc)
+	 * @see org.deneblingvo.booleans.BooleanFunction#paint(void)
+	 */
+	@Override
+	public void paint(Element svg, int x, int y, int elementWidth, int elementHeight) {
+		for (BooleanFunction function : this.functions) {
+			function.paint(svg, x, y, elementWidth, elementHeight);
+			x = x + elementWidth;
 		}
 	}
 

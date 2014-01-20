@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Алгебра на массивах
  */
 package org.deneblingvo.utils;

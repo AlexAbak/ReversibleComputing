@@ -1,7 +1,9 @@
-/**
+﻿/**
  * Булева функция
  */
 package org.deneblingvo.booleans;
+
+import org.w3c.dom.Element;
 
 
 /**
@@ -29,5 +31,23 @@ public interface BooleanFunction {
 	 * @throws CalculateException При ошибке вычисления
 	 */
 	public BooleanValues calculate(BooleanValues inputs) throws CalculateException; 
+
+	/**
+	 * Инициализирует определения в svg
+	 * @param defs Нода с определениями
+	 * @param elementWidth Ширина единичного элемента
+	 * @param elementHeight Высота единичного элемента
+	 */
+	public void initDefs(Element defs, int elementWidth, int elementHeight);
+
+	/**
+	 * Рисует на svg
+	 * @param svg 
+	 * @param x
+	 * @param y
+	 * @param elementWidth Ширина единичного элемента
+	 * @param elementHeight Высота единичного элемента
+	 */
+	public void paint(Element svg, int x, int y, int elementWidth, int elementHeight);
 
 }

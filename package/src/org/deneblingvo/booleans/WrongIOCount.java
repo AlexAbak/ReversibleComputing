@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Неверное количество входов / выходов
  */
 package org.deneblingvo.booleans;

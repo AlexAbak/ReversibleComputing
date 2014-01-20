@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Булево значение
  */
 package org.deneblingvo.booleans;

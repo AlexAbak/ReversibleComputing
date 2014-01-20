@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Набор булевых значений
  */
 package org.deneblingvo.booleans;
@@ -68,6 +68,11 @@ public final class BooleanValues {
 		return this.values;
 	}
 
+	/**
+	 * Разделение массива значений на два. В первом count  значений остальные во втором.
+	 * @param count Количество значений для первого массива
+	 * @return Два массива значений
+	 */
 	public BooleanValues[] extractValues (int count) {
 		count = this.getCount() - count;
 		int value1 = this.getValue();
@@ -78,6 +83,12 @@ public final class BooleanValues {
 		return outputs;
 	}
 
+	/**
+	 * Объединение массивов значений
+	 * @param values1 Первый массив
+	 * @param values2 Второй массив
+	 * @return Объединённый массив
+	 */
 	static public BooleanValues concat (BooleanValues values1, BooleanValues values2) {
 		int value = (values1.getValue() << values2.getCount()) + values2.getValue();
 		return new BooleanValues(value, values1.getCount() + values2.getCount());

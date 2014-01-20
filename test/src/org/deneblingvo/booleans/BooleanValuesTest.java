@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Набор булевых значений
  */
 package org.deneblingvo.booleans;

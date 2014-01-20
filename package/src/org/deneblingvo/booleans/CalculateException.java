@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Исключение при вычислении выражения
  */
 package org.deneblingvo.booleans;

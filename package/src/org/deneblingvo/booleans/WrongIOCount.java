@@ -3,11 +3,13 @@
  */
 package org.deneblingvo.booleans;
 
+import org.deneblingvo.booleans.compute.ComputeException;
+
 /**
  * @author Алексей Кляузер <drum@pisem.net>
  * Неверное количество входов / выходов
  */
-public class WrongIOCount extends CalculateException {
+public class WrongIOCount extends ComputeException {
 
 	/**
 	 * Серийный номер версии

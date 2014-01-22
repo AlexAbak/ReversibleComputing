@@ -3,13 +3,15 @@
  */
 package org.deneblingvo.booleans;
 
+import org.deneblingvo.booleans.core.Function;
+import org.deneblingvo.booleans.core.BooleanMath;
 import org.deneblingvo.utils.ArrayMath;
 
 /**
  * @author Алексей Кляузер <drum@pisem.net>
  * Булева функция выраженная через таблицу истинности
  */
-public abstract class TruthTable implements BooleanFunction {
+public abstract class TruthTable implements Function {
 
 	/**
 	 * Конструктор
@@ -34,20 +36,6 @@ public abstract class TruthTable implements BooleanFunction {
 	public int getOutputCount() {
 		int max = ArrayMath.max(this.values);
 		return BooleanMath.lg(max) + 1;
-	}
-
-	/* (non-Javadoc)
-	 * @see org.deneblingvo.reversibleComputing.BooleanFunction#calculate(org.deneblingvo.reversibleComputing.BooleanValue[])
-	 */
-	@Override
-	public BooleanValues calculate(BooleanValues inputs) throws CalculateException{
-		if (this.getInputCount() != inputs.getCount()) {
-			throw new WrongIOCount(this.getInputCount(), inputs.getCount());
-		}
-		int index = inputs.getValue();
-		int value = this.values[index]; 
-		BooleanValues outputs = new BooleanValues(value, this.getOutputCount());
-		return outputs;
 	}
 
 	/**

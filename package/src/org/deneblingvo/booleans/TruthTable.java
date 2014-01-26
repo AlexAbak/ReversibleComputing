@@ -5,13 +5,14 @@ package org.deneblingvo.booleans;
 
 import org.deneblingvo.booleans.core.Function;
 import org.deneblingvo.booleans.core.BooleanMath;
+import org.deneblingvo.mixin.Cocktail;
 import org.deneblingvo.utils.ArrayMath;
 
 /**
  * @author Алексей Кляузер <drum@pisem.net>
  * Булева функция выраженная через таблицу истинности
  */
-public abstract class TruthTable implements Function {
+public abstract class TruthTable extends Cocktail implements Function {
 
 	/**
 	 * Конструктор
@@ -21,17 +22,11 @@ public abstract class TruthTable implements Function {
 		this.values = values;
 	}
 
-	/* (non-Javadoc)
-	 * @see org.deneblingvo.reversibleComputing.BooleanFunction#getInputCount()
-	 */
 	@Override
 	public int getInputCount() {
 		return BooleanMath.lg(this.values.length);
 	}
 
-	/* (non-Javadoc)
-	 * @see org.deneblingvo.reversibleComputing.BooleanFunction#getOutputCount()
-	 */
 	@Override
 	public int getOutputCount() {
 		int max = ArrayMath.max(this.values);

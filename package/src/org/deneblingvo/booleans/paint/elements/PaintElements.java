@@ -16,7 +16,8 @@ public final class PaintElements {
 				new ConjunctionPaintFactory(), 
 				new DisjunctionPaintFactory(),
 				new ListPaintFactory(),
-				new SequencePaintFactory()
+				new SequencePaintFactory(),
+				new EqualityPaintFactory()
 		};
 		return factories;
 	}

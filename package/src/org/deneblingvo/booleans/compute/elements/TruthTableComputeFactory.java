@@ -1,9 +1,9 @@
 /**
  * 
  */
-package org.deneblingvo.booleans.paint.elements;
+package org.deneblingvo.booleans.compute.elements;
 
-import org.deneblingvo.booleans.elements.Conjunction;
+import org.deneblingvo.booleans.TruthTable;
 import org.deneblingvo.mixin.Cocktailable;
 import org.deneblingvo.mixin.Mixinable;
 import org.deneblingvo.mixin.MixinableFactory;
@@ -12,16 +12,16 @@ import org.deneblingvo.mixin.MixinableFactory;
  * @author alex
  *
  */
-public final class ConjunctionPaintFactory extends MixinableFactory {
+public final class TruthTableComputeFactory extends MixinableFactory {
 
 	@Override
 	public boolean isCoctail(Cocktailable cocktailable) {
-		return cocktailable.getClass() == Conjunction.class;
+		return cocktailable.getClass().isAssignableFrom(TruthTable.class); 
 	}
 
 	@Override
 	public Mixinable newMixin(Cocktailable cocktailable) {
-		return new ConjunctionPaint((Conjunction)cocktailable);
+		return new TruthTableCompute((TruthTable)cocktailable);
 	}
 
 }
